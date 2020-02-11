@@ -620,13 +620,13 @@ void a3demo_loadShaders(a3_DemoState *demoState)
 	// 05-bloom programs: 
 	// ****TO-DO: 
 	//	-> 2.1b: setup bright pass program
-	/*
+//	/*
 	// texturing with bright-pass or tone-mapping
 	currentDemoProg = demoState->prog_drawTexture_brightPass;
 	a3shaderProgramCreate(currentDemoProg->program, "prog:draw-tex-bright");
 	a3shaderProgramAttachShader(currentDemoProg->program, shaderList.passTexcoord_transform_vs->shader);
 	a3shaderProgramAttachShader(currentDemoProg->program, shaderList.drawTexture_brightPass_fs->shader);
-	*/
+//	*/
 	// ****TO-DO: 
 	//	-> 3.1a: setup Gaussian blur program
 	/*
