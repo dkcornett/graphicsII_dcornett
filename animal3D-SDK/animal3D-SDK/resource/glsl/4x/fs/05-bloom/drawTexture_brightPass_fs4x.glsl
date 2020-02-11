@@ -33,6 +33,13 @@ uniform sampler2D uImage00;
 
 layout (location = 0) out vec4 rtFragColor;
 
+
+//(1)
+float relativeLuminance(vec3 c)
+{
+	return (0.0216 * c.r + 0.7152 * c.g + 0.0722 * c.b);
+}
+
 void main()
 {
 	// DUMMY OUTPUT: all fragments are OPAQUE CYAN
