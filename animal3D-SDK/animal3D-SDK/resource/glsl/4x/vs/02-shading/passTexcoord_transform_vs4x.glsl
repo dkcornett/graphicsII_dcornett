@@ -33,10 +33,37 @@
 //	5) declare texture coordinate outbound varying
 //	6) correctly transform input texture coordinate by atlas matrix
 
+//1 replacing this other layout
 layout (location = 0) in vec4 aPosition;
+
+//these are from demo code and will probably need to be reworked
+/*
+//attribute vec4 position;
+//attribute vec3 normal;
+//varying vec3 passPosition;
+//varying vec3 passNormal;
+*/
+
+
+//2
+
+//3
+
+//4
+
+//5
+
 
 void main()
 {
 	// DUMMY OUTPUT: directly assign input position to output position
 	gl_Position = aPosition;
+	
+	//6
+/*
+//also from demo code and will need reworked
+gl_Position = gl_ModelViewProjectionMatrix * position;
+passPosition = position.xyz;
+passNormal = normal;
+*/
 }
