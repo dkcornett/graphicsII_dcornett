@@ -18,26 +18,23 @@
 	animal3D SDK: Minimal 3D Animation Framework
 	By Daniel S. Buckstein
 	
-	a3_DemoRenderUtils.c
-	Drawing utilities implementations.
+	drawTexture_colorManip_fs4x.glsl
+	Draw texture sample and manipulate result.
 */
 
-#include "a3_DemoRenderUtils.h"
+#version 410
 
+// ****TO-DO: 
+//	1) declare uniform variable for texture; see demo code for hints
+//	2) declare inbound varying for texture coordinate
+//	3) sample texture using texture coordinate
+//	4) modify sample in some creative way
+//	5) assign modified sample to output color
 
-//-----------------------------------------------------------------------------
+out vec4 rtFragColor;
 
-// OpenGL
-#ifdef _WIN32
-#include <Windows.h>
-#include <GL/GL.h>
-#else	// !_WIN32
-#include <OpenGL/gl3.h>
-#endif	// _WIN32
-
-
-//-----------------------------------------------------------------------------
-
-
-
-//-----------------------------------------------------------------------------
+void main()
+{
+	// DUMMY OUTPUT: all fragments are OPAQUE LIGHT GREY
+	rtFragColor = vec4(0.5, 0.5, 0.5, 1.0);
+}
