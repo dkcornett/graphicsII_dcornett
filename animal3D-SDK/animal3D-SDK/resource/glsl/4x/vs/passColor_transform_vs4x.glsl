@@ -37,10 +37,16 @@ uniform in vec4 uMVP;
 layout (location = 0) in vec4 aPosition;
 
 // 3)
-
 layout (location = 3) in vec4 uColor;
-//4)
-//varying out vec4 varColor;
+
+//5)
+out varyingData
+{
+	vec4 rtFragColor;
+} passData;
+
+//5)
+in vec4 rtFragColor;
 
 
 
@@ -53,5 +59,10 @@ void main()
 
 	//2)
 	gl_Position = uMVP * aPosition;
+
+	//5)
+	//gl_FragColor = varColor * uColor;
+
+
 	
 }
